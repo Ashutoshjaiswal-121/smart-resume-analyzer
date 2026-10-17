@@ -1,0 +1,54 @@
+# ============================================================
+# Smart Resume Analyser — .gitignore
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# Models & Data (large files — download separately)
+models/*.npy
+models/*.bin
+models/*.pt
+*.csv
+*.pdf
+
+# UN-ignore files needed for deployment
+!data/jobs_dataset_with_features.csv
+!data/clean_resume_data.csv
+!models/resume_classifier.pkl
+!models/tfidf_vectorizer.pkl
+!models/label_encoder.pkl
+!models/job_embeddings.npy
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
